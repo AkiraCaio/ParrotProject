@@ -29,18 +29,15 @@ internal struct ColorName {
   internal let rgbaValue: UInt32
   internal var color: Color { return Color(named: self) }
 
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#0276be"></span>
-  /// Alpha: 100% <br/> (0x0276beff)
-  internal static let primaryBlue = ColorName(rgbaValue: 0x0276beff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#343c45"></span>
-  /// Alpha: 100% <br/> (0x343c45ff)
-  internal static let primaryText = ColorName(rgbaValue: 0x343c45ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#8e959f"></span>
-  /// Alpha: 100% <br/> (0x8e959fff)
-  internal static let secondaryText = ColorName(rgbaValue: 0x8e959fff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#004e7f"></span>
-  /// Alpha: 100% <br/> (0x004e7fff)
-  internal static let secundaryBlue = ColorName(rgbaValue: 0x004e7fff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#b9b9b9"></span>
+  /// Alpha: 100% <br/> (0xb9b9b9ff)
+  internal static let primaryGray = ColorName(rgbaValue: 0xb9b9b9ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#e25252"></span>
+  /// Alpha: 100% <br/> (0xe25252ff)
+  internal static let primaryRed = ColorName(rgbaValue: 0xe25252ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#5d5d5d"></span>
+  /// Alpha: 100% <br/> (0x5d5d5dff)
+  internal static let primaryText = ColorName(rgbaValue: 0x5d5d5dff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

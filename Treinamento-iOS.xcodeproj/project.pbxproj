@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -69,6 +69,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		83CAC83422E89422007AC435 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F66C788C22D8BC45001B5FDA /* Main.storyboard */,
+				83CAC83522E89444007AC435 /* Controller */,
+				83CAC83722E89475007AC435 /* ViewModel */,
+				83CAC83622E8946C007AC435 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		83CAC83522E89444007AC435 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F66C788A22D8BC45001B5FDA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83CAC83622E8946C007AC435 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		83CAC83722E89475007AC435 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F66C787C22D8BC45001B5FDA = {
 			isa = PBXGroup;
 			children = (
@@ -90,9 +123,8 @@
 		F66C788722D8BC45001B5FDA /* Treinamento-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				83CAC83422E89422007AC435 /* Login */,
 				F66C789A22D8BC87001B5FDA /* Application */,
-				F66C788A22D8BC45001B5FDA /* ViewController.swift */,
-				F66C788C22D8BC45001B5FDA /* Main.storyboard */,
 				F66C789422D8BC4D001B5FDA /* Info.plist */,
 				F66C789122D8BC4D001B5FDA /* LaunchScreen.storyboard */,
 			);
@@ -432,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "treinamento.Treinamento-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = caio.parrot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,7 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "treinamento.Treinamento-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = caio.parrot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

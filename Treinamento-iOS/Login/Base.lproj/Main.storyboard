@@ -61,6 +61,9 @@
                                                 <state key="normal" title="Entrar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVr-t1-ByC"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-6h-E6A">
                                                 <rect key="frame" x="56" y="219" width="302" height="1"/>
@@ -74,6 +77,9 @@
                                                 <state key="normal" title="Ainda não tem conta?">
                                                     <color key="titleColor" red="0.36470588235294116" green="0.36470588235294116" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lN9-1J-Idr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

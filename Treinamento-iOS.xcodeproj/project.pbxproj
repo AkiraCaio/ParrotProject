@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		513BDB14F8CC1C7E59CA5990 /* Pods_Treinamento_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B686BBC20317352F7F79AD3 /* Pods_Treinamento_iOS.framework */; };
+		83CAC83922E8AA46007AC435 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAC83822E8AA46007AC435 /* User.swift */; };
 		F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788822D8BC45001B5FDA /* AppDelegate.swift */; };
 		F66C788B22D8BC45001B5FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788A22D8BC45001B5FDA /* ViewController.swift */; };
 		F66C788E22D8BC45001B5FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66C788C22D8BC45001B5FDA /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		08867C8207311481E6B791B1 /* Pods-Treinamento-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treinamento-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treinamento-iOS/Pods-Treinamento-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5B686BBC20317352F7F79AD3 /* Pods_Treinamento_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treinamento_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CAC83822E8AA46007AC435 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F66C788522D8BC45001B5FDA /* Treinamento-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treinamento-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C788822D8BC45001B5FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66C788A22D8BC45001B5FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		83CAC83622E8946C007AC435 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83CAC83822E8AA46007AC435 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				F66C788B22D8BC45001B5FDA /* ViewController.swift in Sources */,
 				F66C78A722D8CF65001B5FDA /* Localizable.swift in Sources */,
 				F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */,
+				83CAC83922E8AA46007AC435 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

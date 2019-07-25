@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		513BDB14F8CC1C7E59CA5990 /* Pods_Treinamento_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B686BBC20317352F7F79AD3 /* Pods_Treinamento_iOS.framework */; };
+		8382738422E9DAAC00CF01CE /* AutenticationRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382738322E9DAAC00CF01CE /* AutenticationRequestFactory.swift */; };
+		8382738622E9DCCC00CF01CE /* AutenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382738522E9DCCC00CF01CE /* AutenticationService.swift */; };
+		8382738822E9E3B000CF01CE /* SessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382738722E9E3B000CF01CE /* SessionControl.swift */; };
+		8382738A22E9EBB700CF01CE /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382738922E9EBB700CF01CE /* ScreenManager.swift */; };
+		8382738C22E9EF5400CF01CE /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382738B22E9EF5400CF01CE /* SingUpViewController.swift */; };
 		83CAC83922E8AA46007AC435 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAC83822E8AA46007AC435 /* User.swift */; };
+		83CDACA222E9CCFB005F1DCC /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CDACA122E9CCFB005F1DCC /* UserViewModel.swift */; };
 		F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788822D8BC45001B5FDA /* AppDelegate.swift */; };
 		F66C788B22D8BC45001B5FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788A22D8BC45001B5FDA /* ViewController.swift */; };
 		F66C788E22D8BC45001B5FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66C788C22D8BC45001B5FDA /* Main.storyboard */; };
@@ -25,7 +31,13 @@
 /* Begin PBXFileReference section */
 		08867C8207311481E6B791B1 /* Pods-Treinamento-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treinamento-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Treinamento-iOS/Pods-Treinamento-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5B686BBC20317352F7F79AD3 /* Pods_Treinamento_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treinamento_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8382738322E9DAAC00CF01CE /* AutenticationRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutenticationRequestFactory.swift; sourceTree = "<group>"; };
+		8382738522E9DCCC00CF01CE /* AutenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutenticationService.swift; sourceTree = "<group>"; };
+		8382738722E9E3B000CF01CE /* SessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionControl.swift; sourceTree = "<group>"; };
+		8382738922E9EBB700CF01CE /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
+		8382738B22E9EF5400CF01CE /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		83CAC83822E8AA46007AC435 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		83CDACA122E9CCFB005F1DCC /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		F66C788522D8BC45001B5FDA /* Treinamento-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treinamento-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C788822D8BC45001B5FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66C788A22D8BC45001B5FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +86,8 @@
 		83CAC83422E89422007AC435 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F66C788C22D8BC45001B5FDA /* Main.storyboard */,
 				83CAC83522E89444007AC435 /* Controller */,
+				83CDACA322E9D0F1005F1DCC /* Service */,
 				83CAC83722E89475007AC435 /* ViewModel */,
 				83CAC83622E8946C007AC435 /* Model */,
 			);
@@ -86,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F66C788A22D8BC45001B5FDA /* ViewController.swift */,
+				8382738B22E9EF5400CF01CE /* SingUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,8 +114,18 @@
 		83CAC83722E89475007AC435 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				83CDACA122E9CCFB005F1DCC /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83CDACA322E9D0F1005F1DCC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8382738322E9DAAC00CF01CE /* AutenticationRequestFactory.swift */,
+				8382738522E9DCCC00CF01CE /* AutenticationService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		F66C787C22D8BC45001B5FDA = {
@@ -127,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				83CAC83422E89422007AC435 /* Login */,
+				F66C788C22D8BC45001B5FDA /* Main.storyboard */,
 				F66C789A22D8BC87001B5FDA /* Application */,
 				F66C789422D8BC4D001B5FDA /* Info.plist */,
 				F66C789122D8BC4D001B5FDA /* LaunchScreen.storyboard */,
@@ -137,8 +161,10 @@
 		F66C789A22D8BC87001B5FDA /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F66C788822D8BC45001B5FDA /* AppDelegate.swift */,
 				F66C789B22D8BDA4001B5FDA /* Supporting Files */,
+				F66C788822D8BC45001B5FDA /* AppDelegate.swift */,
+				8382738722E9E3B000CF01CE /* SessionControl.swift */,
+				8382738922E9EBB700CF01CE /* ScreenManager.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -308,13 +334,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8382738622E9DCCC00CF01CE /* AutenticationService.swift in Sources */,
+				8382738C22E9EF5400CF01CE /* SingUpViewController.swift in Sources */,
+				8382738A22E9EBB700CF01CE /* ScreenManager.swift in Sources */,
 				F66C78A622D8CF65001B5FDA /* Storyboards.swift in Sources */,
+				83CDACA222E9CCFB005F1DCC /* UserViewModel.swift in Sources */,
 				F66C78A822D8CF65001B5FDA /* Colors.swift in Sources */,
 				F66C78AA22D8D453001B5FDA /* Assets.swift in Sources */,
 				F66C788B22D8BC45001B5FDA /* ViewController.swift in Sources */,
+				8382738822E9E3B000CF01CE /* SessionControl.swift in Sources */,
 				F66C78A722D8CF65001B5FDA /* Localizable.swift in Sources */,
 				F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */,
 				83CAC83922E8AA46007AC435 /* User.swift in Sources */,
+				8382738422E9DAAC00CF01CE /* AutenticationRequestFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

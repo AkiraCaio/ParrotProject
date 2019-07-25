@@ -14,10 +14,12 @@ class User: Object, Mappable {
     
     
     var id = RealmOptional<Int>()
-    @objc var name = ""
-    @objc var email =  ""
-    @objc var userName = ""
-    @objc var photo = ""
+    @objc dynamic var name: String?
+    @objc dynamic var email: String?
+    @objc dynamic var userName: String?
+    @objc dynamic var photo: String?
+    @objc dynamic var token: String?
+
     
     
     required convenience init?(map: Map) {

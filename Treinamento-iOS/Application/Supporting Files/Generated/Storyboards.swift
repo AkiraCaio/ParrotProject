@@ -61,7 +61,9 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
-    internal static let initialScene = InitialSceneType<Treinamento_iOS.ViewController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<UINavigationController>(storyboard: Main.self)
+
+    internal static let singUpViewController = SceneType<Treinamento_iOS.SingUpViewController>(storyboard: Main.self, identifier: "SingUpViewController")
   }
 }
 

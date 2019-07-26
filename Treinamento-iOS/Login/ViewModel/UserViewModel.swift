@@ -35,4 +35,12 @@ class UserViewModel {
         }
     }
     
+    static func deleteAll(){
+        
+        try? uiRealm.write {
+            uiRealm.deleteAll()
+        }
+        
+    }
+    
 }

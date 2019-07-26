@@ -80,4 +80,14 @@ class AutenticationService {
         }
     }
     
+    func deleteLogout(){
+        
+        AutenticationRequestFactory.deleteLogout().validate().responseObject { (response: DataResponse<User>) in
+            
+            self.delegate.sucess()
+            UserViewModel.deleteAll()
+
+        }
+    
+    }
 }

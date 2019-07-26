@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-let baseUrl = "http://200.19.188.7:3010"
+let baseUrl = "http://172.18.9.240:3010"
 
 var uiRealm: Realm!
 

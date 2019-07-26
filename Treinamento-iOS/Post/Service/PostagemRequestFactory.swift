@@ -36,11 +36,11 @@ class PostagemRequestFactory{
     }
     
     
-//    static func putPost(id: Int) -> DataRequest{
-//        
-//        
-//        
-//        return nil
-//        
-//    }
+    static func putPost(id: Int, message: String) -> DataRequest{
+        
+        let params = ["mensagem" : message]
+        
+        
+        return Alamofire.request(baseUrl + "/postagem/\(id)", method: .put, parameters: params, encoding: JSONEncoding.default, headers: SessionControl.headers)
+    }
 }

@@ -68,8 +68,6 @@ class PostagemService {
             switch response.result{
                 
             case .success:
-                
-                
                 self.delegate.sucess()
                 
             case .failure(let error):
@@ -80,8 +78,25 @@ class PostagemService {
         }
     }
     
-    func putPost(id: Int){
+    func putPost(id: Int, message: String){
         
+        PostagemRequestFactory.putPost(id: id, message: message).validate().responseObject { (response: DataResponse<Post>) in
+            switch response.result{
+           
+            case .success:
+                
+                if let post = response.result.value {
+                    PostViewModel.save(object: post)
+                }
+                
+                self.delegate.sucess()
+                
+            case .failure(let erro):
+                self.delegate.failure(error: erro.localizedDescription)
+
+            }
+            
+        }
         
     }
     

@@ -41,13 +41,11 @@ class PostViewModel {
         }
     }
     
-    static func getPost(id: Int) -> PostView{
+    static func getPostView(id: Int) -> PostView{
         
-//        let result = uiRealm.object(ofType: Post.self, forPrimaryKey: id)
-//
-//        return result
+        let result = uiRealm.object(ofType: Post.self, forPrimaryKey: id)
         
-        return PostView()
+        return self.getAsView(post: result)
     }
     
     
@@ -78,20 +76,19 @@ class PostViewModel {
         return postsView
     }
     
-//    static func getAsModel(postView: PostView) -> Post {
-//        let post = Post()
-//
-//        post.id.value = postView.id
-//        post.created_at.value = postView.created_at
-//        post.curtidas.value = postView.curtidas
-//        post.message = postView.message
-//        post.postagem = postView.usuario + ": " + postView.message
-//        post.usuario_id.value = postView.usuario_id
-//
-//        return post
-//    }
-//
-//
+    static func getAsModel(postView: PostView) -> Post {
+        let post = Post()
+
+        post.id.value = postView.id
+        post.criado_em.value = postView.criado_em
+        post.curtidas.value = postView.curtidas
+        post.mensagem = postView.message
+        post.user = postView.user
+        
+        return post
+    }
+
+
     
     
 }

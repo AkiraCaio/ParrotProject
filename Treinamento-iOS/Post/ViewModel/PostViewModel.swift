@@ -15,6 +15,7 @@ struct PostView{
     var curtidas = 0
     var message = ""
     var criado_em = 0.0
+    var curtido = false
 }
 
 class PostViewModel {
@@ -84,11 +85,37 @@ class PostViewModel {
         post.curtidas.value = postView.curtidas
         post.mensagem = postView.message
         post.user = postView.user
+        post.curtido.value = postView.curtido
         
         return post
     }
+    
+    static func get() -> [Post] {
+        let results = uiRealm.objects(Post.self)
+        
+        var posts: [Post] = []
+        posts.append(contentsOf: results)
+        
+        return posts
+    }
+    
+    static func getPosts() -> [PostView] {
+        return self.getAsView(posts: self.get())
+    }
 
+    static func getTimeAgoPost(creatTime: Double) -> Date {
+        let dateToday = Date()
+        
+        let creatData = Date(timeIntervalSince1970: TimeInterval(creatTime))
+        
+        return Date(timeIntervalSince1970: TimeInterval(dateToday.timeIntervalSince(creatData)))
+        
+    }
 
+    static func getTimeAgoPost() -> String {
+        
+        return ""
+    }
     
     
 }

@@ -29,7 +29,7 @@ class SessionControl {
             self.headers["token"] = token
         }
         
-        print(self.headers["token"] ?? " :D ")
+        print(self.headers["token"] ?? " sem token ")
     }
     
     

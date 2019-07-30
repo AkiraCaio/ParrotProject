@@ -28,6 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         print("DOCUMENTS: ", Realm.Configuration.defaultConfiguration.fileURL ?? "")
+        
+        if SessionControl.isSessionActive {
+            
+            self.window?.rootViewController = UINavigationController(rootViewController: StoryboardScene.Post.postTabBarViewController.instantiate())
+        }else{
+            self.window?.rootViewController = StoryboardScene.Main.initialScene.instantiate()
+        }
 
         return true
     }

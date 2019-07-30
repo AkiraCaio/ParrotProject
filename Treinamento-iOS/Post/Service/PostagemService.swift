@@ -18,9 +18,9 @@ protocol PostagemServiceDelegate{
 
 class PostagemService {
     
-    var delegate: AutenticationServiceDelegate!
+    var delegate: PostagemServiceDelegate!
     
-    init(delegate: AutenticationServiceDelegate) {
+    init(delegate: PostagemServiceDelegate) {
         self.delegate = delegate
     }
     
@@ -37,7 +37,7 @@ class PostagemService {
                 self.delegate.sucess()
                 
             case .failure(let error):
-                self.delegate.failure(error: error.localizedDescription)
+                self.delegate.failure(erro: error.localizedDescription)
             }
             
         }
@@ -57,7 +57,7 @@ class PostagemService {
                 self.delegate.sucess()
                 
             case .failure(let error):
-                self.delegate.failure(error: error.localizedDescription)
+                self.delegate.failure(erro: error.localizedDescription)
             }
         }
     }
@@ -71,7 +71,7 @@ class PostagemService {
                 self.delegate.sucess()
                 
             case .failure(let error):
-                self.delegate.failure(error: error.localizedDescription)
+                self.delegate.failure(erro: error.localizedDescription)
                 
             }
             
@@ -92,7 +92,7 @@ class PostagemService {
                 self.delegate.sucess()
                 
             case .failure(let erro):
-                self.delegate.failure(error: erro.localizedDescription)
+                self.delegate.failure(erro: erro.localizedDescription)
 
             }
             

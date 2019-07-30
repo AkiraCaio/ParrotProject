@@ -42,14 +42,14 @@ class SingUpViewController: UIViewController {
 extension SingUpViewController: AutenticationServiceDelegate{
     func sucess() {
         
-        self.dismiss(animated: true){
-            ScreenManager.setupInitialViewController()
-        }
+        self.navigationController?.popViewController(animated: true)
+        
+        ScreenManager.setupInitialViewController()
     }
     
     func failure(error: String) {
         print(error)
+        
+        
     }
-    
-    
 }

@@ -65,6 +65,13 @@ internal enum StoryboardScene {
 
     internal static let singUpViewController = SceneType<Treinamento_iOS.SingUpViewController>(storyboard: Main.self, identifier: "SingUpViewController")
   }
+  internal enum Post: StoryboardType {
+    internal static let storyboardName = "Post"
+
+    internal static let postTabBarViewController = SceneType<Treinamento_iOS.PostTabBarViewController>(storyboard: Post.self, identifier: "PostTabBarViewController")
+
+    internal static let postViewController = SceneType<Treinamento_iOS.PostViewController>(storyboard: Post.self, identifier: "PostViewController")
+  }
 }
 
 internal enum StoryboardSegue {

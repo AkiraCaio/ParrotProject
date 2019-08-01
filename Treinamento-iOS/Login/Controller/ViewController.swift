@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         self.service = AutenticationService(delegate: self)
     
+        self.hideKeyboardWhenTappedAround()
     }
 
     @IBAction func loginAction(_ sender: Any) {

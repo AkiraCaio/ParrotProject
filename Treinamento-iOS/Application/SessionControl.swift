@@ -25,9 +25,10 @@ class SessionControl {
     }
     
     static func setHeaders(){
-        if let token = user?.token{
+        if let token = user?.token {
             self.headers["token"] = token
         }
+        print(user)
         
         print(self.headers["token"] ?? " sem token ")
     }

@@ -24,20 +24,25 @@ class PostFeedTableViewCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
     
 //        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
-        
+        self.selectionStyle = .none
     }
     
     func bind(post: PostView) {
-        self.userNameLabel.text = "@\(post.user.userName ?? "")"
-        self.messagePostLabel.text = post.message
-        self.likeButton.setTitle(String(post.curtidas), for: .normal)
+        
+        self.userNameLabel.text = "@\(post.author.userName ?? "")"
+        self.messagePostLabel.text = post.message.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.likeButton.setTitle(" " + String(post.curtidas), for: .normal)
         self.timeAgoPostLabel.text = "1h ago"
-        self.userNameLabel.text = "@Matela Love"
+        self.likeButton.tintColor = post.curtido ? Color.red : Color.gray
+        
+        
     }
     
     @IBAction func likeAction(_ sender: Any) {
+        
     }
     @IBAction func optionsPostAction(_ sender: Any) {
+        
     }
     
     

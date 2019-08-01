@@ -72,6 +72,9 @@ internal enum StoryboardScene {
 
     internal static let postViewController = SceneType<Treinamento_iOS.PostViewController>(storyboard: Post.self, identifier: "PostViewController")
   }
+  internal enum Profile: StoryboardType {
+    internal static let storyboardName = "profile"
+  }
 }
 
 internal enum StoryboardSegue {

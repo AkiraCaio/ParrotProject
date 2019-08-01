@@ -11,7 +11,7 @@ import RealmSwift
 
 struct PostView{
     var id = -1
-    var user = User()
+    var author = Author()
     var curtidas = 0
     var message = ""
     var criado_em = 0.0
@@ -58,7 +58,7 @@ class PostViewModel {
         var postView = PostView()
         
         postView.id = post.id.value ?? -1
-        postView.user = post.user ?? User()
+        postView.author = post.author ?? Author()
         postView.criado_em = post.criado_em.value ?? 0.0
         postView.curtidas = post.curtidas.value ?? 0
         postView.message = post.mensagem ?? ""
@@ -84,7 +84,7 @@ class PostViewModel {
         post.criado_em.value = postView.criado_em
         post.curtidas.value = postView.curtidas
         post.mensagem = postView.message
-        post.user = postView.user
+        post.author = postView.author
         post.curtido.value = postView.curtido
         
         return post

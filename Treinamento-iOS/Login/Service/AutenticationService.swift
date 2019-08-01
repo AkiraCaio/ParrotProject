@@ -75,7 +75,7 @@ class AutenticationService {
                 self.delegate.sucess()
                 
             case .failure(let error):
-                self.delegate.failure(error:error.localizedDescription)
+                self.delegate.failure(error: error.localizedDescription)
             }
         }
     }

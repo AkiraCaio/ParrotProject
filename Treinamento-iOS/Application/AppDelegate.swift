@@ -18,16 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         do {
+            
             try uiRealm = Realm()
+
         } catch {
             print("Erro no Realm")
         }
 
         print("DOCUMENTS: ", Realm.Configuration.defaultConfiguration.fileURL ?? "")
+        
+        SessionControl.setHeaders()
         
         if SessionControl.isSessionActive {
             

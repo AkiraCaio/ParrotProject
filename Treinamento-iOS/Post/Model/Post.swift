@@ -17,7 +17,7 @@ class Post: Object, Mappable {
     @objc dynamic var mensagem: String?
     var curtidas = RealmOptional<Int>()
     var criado_em = RealmOptional<Double>()
-    @objc dynamic var user: User?
+    @objc dynamic var author: Author?
     var curtido = RealmOptional<Bool>()
 
     
@@ -34,7 +34,7 @@ class Post: Object, Mappable {
         self.mensagem                         <- map["mensagem"]
         self.curtidas.value                   <- map["curtidas"]
         self.criado_em.value                  <- map["criado_em"]
-        self.user                             <- map["autor"]
+        self.author                           <- map["autor"]
         self.curtido                          <- map["curtido"]
     }
     

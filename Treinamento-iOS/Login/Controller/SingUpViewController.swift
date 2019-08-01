@@ -22,6 +22,8 @@ class SingUpViewController: UIViewController {
         super.viewDidLoad()
         
         self.service = AutenticationService.init(delegate: self)
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func singUpAction(_ sender: Any) {

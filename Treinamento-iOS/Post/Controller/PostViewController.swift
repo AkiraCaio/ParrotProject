@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 
 class PostViewController: UIViewController {
+    
 
     var posts: [PostView] = []
     
@@ -22,15 +23,18 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         self.service = PostagemService.init(delegate: self)
         
         self.perfilImageView.layer.cornerRadius = self.perfilImageView.frame.height/2
-//        self.feedTableView.estimatedRowHeight = 600
         
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
         self.feedTableView.register(cellType: PostFeedTableViewCell.self)
-        
+        self.feedTableView.estimatedRowHeight = 800
+    
+        print(SessionControl.user)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,11 +50,13 @@ class PostViewController: UIViewController {
     }
 
     @IBAction func sendAction(_ sender: Any) {
+        service.postCreateNewPost(message: inputPostTextView.text)
         
+        inputPostTextView.text = ""
     }
     
     @IBAction func imageLoadAction(_ sender: Any) {
-        
+//        UIAlertController
     }
 }
 
@@ -69,7 +75,11 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
+        return 500
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNonzeroMagnitude
     }
 }
 

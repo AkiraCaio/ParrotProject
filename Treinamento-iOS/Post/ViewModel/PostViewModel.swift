@@ -16,6 +16,7 @@ struct PostView{
     var message = ""
     var criado_em = 0.0
     var curtido = false
+    
 }
 
 class PostViewModel {
@@ -62,6 +63,7 @@ class PostViewModel {
         postView.criado_em = post.criado_em.value ?? 0.0
         postView.curtidas = post.curtidas.value ?? 0
         postView.message = post.mensagem ?? ""
+        postView.curtido = post.curtido.value ?? false
         
         return postView
     }

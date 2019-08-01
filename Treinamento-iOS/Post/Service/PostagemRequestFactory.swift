@@ -30,6 +30,11 @@ class PostagemRequestFactory{
         return Alamofire.request(baseUrl + "/postagem", method: .post, parameters: mensagem, encoding: JSONEncoding.default, headers: SessionControl.headers)
     }
     
+    static func likePost(id: Int, like: Bool) -> DataRequest{
+        
+        return Alamofire.request(baseUrl + "/curtir/" + String(id), method: !(like) ? .post : .delete, headers: SessionControl.headers)
+    }
+    
     static func deletePost(id: Int) -> DataRequest {
         
         return Alamofire.request(baseUrl + "/postagem/" + String(id), method: .delete, headers: SessionControl.headers)

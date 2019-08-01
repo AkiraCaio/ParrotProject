@@ -32,7 +32,7 @@ class PostViewController: UIViewController {
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
         self.feedTableView.register(cellType: PostFeedTableViewCell.self)
-        self.feedTableView.estimatedRowHeight = 800
+//        self.feedTableView.estimatedRowHeight = 800
     
         print(SessionControl.user)
     }
@@ -70,6 +70,8 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = feedTableView.dequeueReusableCell(for: indexPath) as PostFeedTableViewCell
         
         cell.bind(post: self.posts[indexPath.row])
+        cell.delegate = self
+        
         
         return cell
     }
@@ -97,4 +99,33 @@ extension PostViewController: PostagemServiceDelegate {
     }
     
     
+}
+
+extension PostViewController: PostFeedTableViewCellDelegate{
+    func showOptions(id: Int) {
+        
+        let actionSheet = UIAlertController(title: "", message: "Escolha uma opcao", preferredStyle: .actionSheet)
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        
+        let putPost = UIAlertAction(title: "Alterar postagem", style: .default) { (action) in
+            
+        }
+        
+        let deletePost = UIAlertAction(title: "Deletar postagem", style: .default) { (action) in
+            
+        }
+        
+        actionSheet.addAction(putPost)
+        actionSheet.addAction(deletePost)
+        actionSheet.addAction(cancel)
+        
+        self.present(actionSheet, animated: true)
+        
+    }
+    
+    func liked(id: Int, like: Bool) {
+        self.service.likePost(id: id, like: like)
+
+    }
 }

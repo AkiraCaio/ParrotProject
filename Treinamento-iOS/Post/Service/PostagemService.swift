@@ -24,6 +24,8 @@ class PostagemService {
         self.delegate = delegate
     }
     
+   
+    
     func getPosts(page: Int = 1){
         PostagemRequestFactory.getPosts(page: page).validate().responseArray { (response: DataResponse<[Post]>) in
             
@@ -40,6 +42,25 @@ class PostagemService {
                 self.delegate.failure(erro: error.localizedDescription)
             }
             
+        }
+    }
+    
+    func likePost(id: Int, like: Bool) {
+        PostagemRequestFactory.likePost(id: id, like: like).validate().responseObject { (response: DataResponse<Post>) in
+            
+            switch response.result{
+                
+            case .success:
+                if let post = response.result.value{
+                    PostViewModel.saveAll(objects: [post])
+                }
+                
+                self.delegate.sucess()
+                
+            case .failure(let error):
+                self.delegate.failure(erro: error.localizedDescription)
+
+            }
         }
     }
     

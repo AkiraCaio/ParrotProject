@@ -111,6 +111,7 @@
             <connections>
                 <outlet property="likeButton" destination="EFC-mA-RnS" id="4WL-HI-Pky"/>
                 <outlet property="messagePostLabel" destination="cWS-vf-scf" id="PSY-Lq-Zrh"/>
+                <outlet property="optionsPostButton" destination="UB0-7f-puS" id="dda-fH-e6H"/>
                 <outlet property="photoPostImageView" destination="ADg-5o-L0w" id="OcW-cm-4CB"/>
                 <outlet property="profileImageView" destination="evD-IB-yBs" id="Oeb-nO-6hV"/>
                 <outlet property="timeAgoPostLabel" destination="hiD-a4-uCU" id="VEP-lU-THE"/>

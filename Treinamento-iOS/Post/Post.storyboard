@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -111,10 +111,68 @@
             </objects>
             <point key="canvasLocation" x="-281.15942028985512" y="154.6875"/>
         </scene>
+        <!--Put Post View Controller-->
+        <scene sceneID="4bG-Hk-rL9">
+            <objects>
+                <viewController storyboardIdentifier="PutPostViewController" id="RQL-FL-k8l" customClass="PutPostViewController" customModule="Treinamento_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="706-Vc-QJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAl-u8-1bO">
+                                <rect key="frame" x="281" y="433" width="69" height="30"/>
+                                <color key="tintColor" red="0.88627450980392153" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Confirmar"/>
+                                <connections>
+                                    <action selector="confirmAction:" destination="RQL-FL-k8l" eventType="touchUpInside" id="gsO-DE-ORi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ak2-go-zcD">
+                                <rect key="frame" x="16" y="164" width="382" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="st2-tF-sfv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-vc-Iu9">
+                                <rect key="frame" x="64" y="433" width="61" height="30"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="RQL-FL-k8l" eventType="touchUpInside" id="zy0-2g-Urx"/>
+                                    <action selector="confirmAction:" destination="RQL-FL-k8l" eventType="touchUpInside" id="MRp-GF-LpE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IHh-6v-AEi" firstAttribute="trailing" secondItem="eAl-u8-1bO" secondAttribute="trailing" constant="64" id="89I-0x-cuN"/>
+                            <constraint firstItem="IHh-6v-AEi" firstAttribute="trailing" secondItem="Ak2-go-zcD" secondAttribute="trailing" constant="16" id="BDA-q1-bu7"/>
+                            <constraint firstItem="Ak2-go-zcD" firstAttribute="top" secondItem="IHh-6v-AEi" secondAttribute="top" constant="120" id="Qqf-8e-7hZ"/>
+                            <constraint firstItem="eAl-u8-1bO" firstAttribute="centerY" secondItem="YjS-vc-Iu9" secondAttribute="centerY" id="WUM-7p-Byd"/>
+                            <constraint firstItem="YjS-vc-Iu9" firstAttribute="leading" secondItem="IHh-6v-AEi" secondAttribute="leading" constant="64" id="YL4-wa-iwL"/>
+                            <constraint firstItem="Ak2-go-zcD" firstAttribute="leading" secondItem="IHh-6v-AEi" secondAttribute="leading" constant="16" id="a5H-h0-p2C"/>
+                            <constraint firstItem="eAl-u8-1bO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YjS-vc-Iu9" secondAttribute="trailing" constant="8" id="bjk-Nv-R3J"/>
+                            <constraint firstItem="YjS-vc-Iu9" firstAttribute="top" secondItem="Ak2-go-zcD" secondAttribute="bottom" constant="149" id="uln-1N-bry"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IHh-6v-AEi"/>
+                    </view>
+                    <connections>
+                        <outlet property="postTextView" destination="Ak2-go-zcD" id="LuA-gr-cDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiP-W3-4O4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582.60869565217399" y="154.6875"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="imagePerfilTemp" width="37.5" height="37.5"/>
-        <image name="imageSendPicture" width="22.5" height="21"/>
+        <image name="imagePerfilTemp" width="37.666667938232422" height="37.666667938232422"/>
+        <image name="imageSendPicture" width="22.333333969116211" height="21"/>
         <image name="imageSendPost" width="25" height="25"/>
     </resources>
 </document>

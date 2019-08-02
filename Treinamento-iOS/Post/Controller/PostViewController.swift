@@ -29,10 +29,14 @@ class PostViewController: UIViewController {
         
         self.perfilImageView.layer.cornerRadius = self.perfilImageView.frame.height/2
         
+        self.setupTableView()
+    }
+    
+    func setupTableView() {
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
         self.feedTableView.register(cellType: PostFeedTableViewCell.self)
-//        self.feedTableView.estimatedRowHeight = 800
+        //        self.feedTableView.estimatedRowHeight = 800
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,7 +111,11 @@ extension PostViewController: PostFeedTableViewCellDelegate{
         let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         
         let putPost = UIAlertAction(title: "Alterar postagem", style: .default) { (action) in
+            let controllerPutPost = StoryboardScene.Post.putPostViewController.instantiate()
+            controllerPutPost.post = PostViewModel.getPostView(id: id)
+            controllerPutPost.self.delegate = self
             
+            self.present(UINavigationController(rootViewController: controllerPutPost), animated: true)
         }
         
         let deletePost = UIAlertAction(title: "Deletar postagem", style: .default) { (action) in
@@ -124,6 +132,11 @@ extension PostViewController: PostFeedTableViewCellDelegate{
     
     func liked(id: Int, like: Bool) {
         self.service.likePost(id: id, like: like)
+    }
+}
 
+extension PostViewController: PutPostViewControllerDelegate{
+    func confirmPutPost(id: Int, message: String) {
+        self.service.putPost(id: id, message: message)
     }
 }

@@ -52,7 +52,7 @@ class PostagemService {
                 
             case .success:
                 if let post = response.result.value{
-                    PostViewModel.saveAll(objects: [post])
+                    PostViewModel.save(object: post)
                 }
                 
                 self.delegate.sucess()
@@ -89,6 +89,7 @@ class PostagemService {
             switch response.result{
                 
             case .success:
+                PostViewModel.deletePost(id: id)
                 self.delegate.sucess()
                 
             case .failure(let error):

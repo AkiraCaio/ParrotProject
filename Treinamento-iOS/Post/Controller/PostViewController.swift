@@ -33,8 +33,6 @@ class PostViewController: UIViewController {
         self.feedTableView.dataSource = self
         self.feedTableView.register(cellType: PostFeedTableViewCell.self)
 //        self.feedTableView.estimatedRowHeight = 800
-    
-        print(SessionControl.user)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,7 +111,7 @@ extension PostViewController: PostFeedTableViewCellDelegate{
         }
         
         let deletePost = UIAlertAction(title: "Deletar postagem", style: .default) { (action) in
-            
+            self.service.deletePost(id: id)
         }
         
         actionSheet.addAction(putPost)

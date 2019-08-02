@@ -28,7 +28,13 @@ class PostViewModel {
         }
     }
     
+    static func clear(){
+        try? uiRealm.write{
+            uiRealm.delete(uiRealm.objects(Post.self))
+        }
+    }
     static func saveAll (objects: [Post]){
+        self.clear()
         
         try? uiRealm.write {
             uiRealm.add(objects, update: .all)

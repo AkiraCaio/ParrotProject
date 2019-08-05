@@ -49,6 +49,7 @@ internal enum Asset {
   internal static let icon3dotsImage = ImageAsset(name: "icon3dotsImage")
   internal static let iconHomeTabBar = ImageAsset(name: "iconHomeTabBar")
   internal static let iconLikeButton = ImageAsset(name: "iconLikeButton")
+  internal static let iconProfileTabBar = ImageAsset(name: "iconProfileTabBar")
   internal static let imageMessagePostTemp = ImageAsset(name: "imageMessagePostTemp")
   internal static let imagePerfilTemp = ImageAsset(name: "imagePerfilTemp")
   internal static let imageSendPicture = ImageAsset(name: "imageSendPicture")
@@ -63,6 +64,7 @@ internal enum Asset {
     icon3dotsImage,
     iconHomeTabBar,
     iconLikeButton,
+    iconProfileTabBar,
     imageMessagePostTemp,
     imagePerfilTemp,
     imageSendPicture,

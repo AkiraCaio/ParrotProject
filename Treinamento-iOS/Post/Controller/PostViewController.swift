@@ -32,6 +32,8 @@ class PostViewController: UIViewController {
         self.setupTableView()
         
         self.service.getPosts()
+        
+        self.loadData()
     }
     
     func setupTableView() {
@@ -43,7 +45,7 @@ class PostViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadData()
+//        self.loadData()
     }
     
     

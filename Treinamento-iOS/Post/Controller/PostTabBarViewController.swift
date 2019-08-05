@@ -21,17 +21,15 @@ class PostTabBarViewController: UITabBarController {
         
         let controllerPostViewHome = StoryboardScene.Post.postViewController.instantiate()
         controllerPostViewHome.tabBarItem.image = Asset.iconHomeTabBar.image
-        controllerPostViewHome.tabBarItem.title = "Home"
-
+        controllerPostViewHome.tabBarItem.title = L10n.Tabbar.home
         controllers.append(controllerPostViewHome)
         
+        let controllerProfileViewHome = StoryboardScene.Profile.profileViewController.instantiate()
+        controllerProfileViewHome.tabBarItem.image = Asset.iconProfileTabBar.image
+        controllerProfileViewHome.tabBarItem.title = L10n.Tabbar.profile
+        controllers.append(controllerProfileViewHome)
         
         self.viewControllers = controllers
     }
     
-    
-    
-    
-  
-
 }

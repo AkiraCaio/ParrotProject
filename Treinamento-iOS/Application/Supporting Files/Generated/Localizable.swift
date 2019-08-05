@@ -12,6 +12,13 @@ internal enum L10n {
     /// Ok
     internal static let ok = L10n.tr("Localizable", "common.ok")
   }
+
+  internal enum Tabbar {
+    /// Home
+    internal static let home = L10n.tr("Localizable", "tabBar.home")
+    /// Perfil
+    internal static let profile = L10n.tr("Localizable", "tabBar.profile")
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

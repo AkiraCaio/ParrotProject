@@ -26,9 +26,10 @@
 		B0145E1922EF6CD5001D86ED /* PostFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0145E1722EF6CD5001D86ED /* PostFeedTableViewCell.swift */; };
 		B0145E1A22EF6CD5001D86ED /* PostFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0145E1822EF6CD5001D86ED /* PostFeedTableViewCell.xib */; };
 		B0145E1C22EF7FEC001D86ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0145E1B22EF7FEC001D86ED /* Assets.xcassets */; };
+		B01FC76C22F88D9200FE3FB9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FC76B22F88D9200FE3FB9 /* ProfileViewController.swift */; };
 		B07A6A9C22F4A25B0083885B /* PutPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A6A9B22F4A25B0083885B /* PutPostViewController.swift */; };
 		B09AB29C22F3230C008B3F67 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AB29B22F3230C008B3F67 /* Author.swift */; };
-		B0D4C37522F337CF00532B76 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D4C37422F337CF00532B76 /* profile.storyboard */; };
+		B0D4C37522F337CF00532B76 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D4C37422F337CF00532B76 /* Profile.storyboard */; };
 		B0FB6B7A22F45A1A007F86CF /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB6B7922F45A1A007F86CF /* ResponseType.swift */; };
 		F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788822D8BC45001B5FDA /* AppDelegate.swift */; };
 		F66C788B22D8BC45001B5FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788A22D8BC45001B5FDA /* ViewController.swift */; };
@@ -63,9 +64,10 @@
 		B0145E1722EF6CD5001D86ED /* PostFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedTableViewCell.swift; sourceTree = "<group>"; };
 		B0145E1822EF6CD5001D86ED /* PostFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostFeedTableViewCell.xib; sourceTree = "<group>"; };
 		B0145E1B22EF7FEC001D86ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B01FC76B22F88D9200FE3FB9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Treinamento-iOS/Application/ProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B07A6A9B22F4A25B0083885B /* PutPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutPostViewController.swift; sourceTree = "<group>"; };
 		B09AB29B22F3230C008B3F67 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
-		B0D4C37422F337CF00532B76 /* profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
+		B0D4C37422F337CF00532B76 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B0FB6B7922F45A1A007F86CF /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		F66C788522D8BC45001B5FDA /* Treinamento-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treinamento-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C788822D8BC45001B5FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D4C37322F337AA00532B76 /* Controller */,
-				B0D4C37422F337CF00532B76 /* profile.storyboard */,
+				B0D4C37422F337CF00532B76 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 		B0D4C37322F337AA00532B76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B01FC76B22F88D9200FE3FB9 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				TargetAttributes = {
 					F66C788422D8BC45001B5FDA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -376,7 +380,7 @@
 			files = (
 				B0145E1A22EF6CD5001D86ED /* PostFeedTableViewCell.xib in Resources */,
 				F66C789322D8BC4D001B5FDA /* LaunchScreen.storyboard in Resources */,
-				B0D4C37522F337CF00532B76 /* profile.storyboard in Resources */,
+				B0D4C37522F337CF00532B76 /* Profile.storyboard in Resources */,
 				F66C78A122D8BE32001B5FDA /* Colors.json in Resources */,
 				F66C789F22D8BE16001B5FDA /* Localizable.strings in Resources */,
 				B0145E1C22EF7FEC001D86ED /* Assets.xcassets in Resources */,
@@ -473,6 +477,7 @@
 				83D999ED22EB313E00C32A94 /* PostagemService.swift in Sources */,
 				B09AB29C22F3230C008B3F67 /* Author.swift in Sources */,
 				F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */,
+				B01FC76C22F88D9200FE3FB9 /* ProfileViewController.swift in Sources */,
 				83CAC83922E8AA46007AC435 /* User.swift in Sources */,
 				8382738422E9DAAC00CF01CE /* AutenticationRequestFactory.swift in Sources */,
 			);
@@ -621,6 +626,7 @@
 			baseConfigurationReference = F7040D9000FD307B8EF255FF /* Pods-Treinamento-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCPNHXKJST;
 				INFOPLIST_FILE = "Treinamento-iOS/Info.plist";
@@ -631,6 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = caio.parrot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -641,6 +648,7 @@
 			baseConfigurationReference = 08867C8207311481E6B791B1 /* Pods-Treinamento-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCPNHXKJST;
 				INFOPLIST_FILE = "Treinamento-iOS/Info.plist";

@@ -30,6 +30,8 @@ class PostViewController: UIViewController {
         self.perfilImageView.layer.cornerRadius = self.perfilImageView.frame.height/2
         
         self.setupTableView()
+        
+        self.service.getPosts()
     }
     
     func setupTableView() {
@@ -48,7 +50,6 @@ class PostViewController: UIViewController {
     func loadData(){
         SVProgressHUD.setDefaultStyle(.dark)
         SVProgressHUD.show()
-        self.service.getPosts()
     }
 
     @IBAction func sendAction(_ sender: Any) {

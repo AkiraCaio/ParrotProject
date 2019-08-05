@@ -138,13 +138,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-vc-Iu9">
-                                <rect key="frame" x="64" y="433" width="61" height="30"/>
+                                <rect key="frame" x="64" y="433" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="HGo-Ow-qJb"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
                                     <action selector="cancelAction:" destination="RQL-FL-k8l" eventType="touchUpInside" id="zy0-2g-Urx"/>
-                                    <action selector="confirmAction:" destination="RQL-FL-k8l" eventType="touchUpInside" id="MRp-GF-LpE"/>
                                 </connections>
                             </button>
                         </subviews>

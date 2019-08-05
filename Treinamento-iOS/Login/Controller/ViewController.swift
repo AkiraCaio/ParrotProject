@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: Any) {
-        PostViewModel.getTimeAgoPost(creatTime: 1564512097)
+//        PostViewModel.getTimeAgoPost(creatTime: 1564512097)
         
         let singUpController = StoryboardScene.Main.singUpViewController.instantiate()
         

@@ -13,6 +13,14 @@ internal enum L10n {
     internal static let ok = L10n.tr("Localizable", "common.ok")
   }
 
+  internal enum Controller {
+
+    internal enum Title {
+      /// Perfil
+      internal static let profile = L10n.tr("Localizable", "controller.title.profile")
+    }
+  }
+
   internal enum Tabbar {
     /// Home
     internal static let home = L10n.tr("Localizable", "tabBar.home")

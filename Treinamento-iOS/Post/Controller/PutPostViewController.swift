@@ -25,13 +25,13 @@ class PutPostViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Editar Postagem"
-        postTextView.text = post.message
         
         self.setupPostTextView()
     }
     
     
     func setupPostTextView(){
+        postTextView.text = post.message
         self.postTextView.layer.borderWidth = 1
         self.postTextView.layer.borderColor = UIColor.black.cgColor
     }

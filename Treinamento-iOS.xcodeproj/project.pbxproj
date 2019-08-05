@@ -30,6 +30,7 @@
 		B07A6A9C22F4A25B0083885B /* PutPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A6A9B22F4A25B0083885B /* PutPostViewController.swift */; };
 		B09AB29C22F3230C008B3F67 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09AB29B22F3230C008B3F67 /* Author.swift */; };
 		B0D4C37522F337CF00532B76 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D4C37422F337CF00532B76 /* Profile.storyboard */; };
+		B0D87FB022F8A94000C6D921 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D87FAF22F8A94000C6D921 /* Profile.swift */; };
 		B0FB6B7A22F45A1A007F86CF /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB6B7922F45A1A007F86CF /* ResponseType.swift */; };
 		F66C788922D8BC45001B5FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788822D8BC45001B5FDA /* AppDelegate.swift */; };
 		F66C788B22D8BC45001B5FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66C788A22D8BC45001B5FDA /* ViewController.swift */; };
@@ -68,6 +69,7 @@
 		B07A6A9B22F4A25B0083885B /* PutPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutPostViewController.swift; sourceTree = "<group>"; };
 		B09AB29B22F3230C008B3F67 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		B0D4C37422F337CF00532B76 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B0D87FAF22F8A94000C6D921 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B0FB6B7922F45A1A007F86CF /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		F66C788522D8BC45001B5FDA /* Treinamento-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treinamento-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66C788822D8BC45001B5FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D4C37322F337AA00532B76 /* Controller */,
+				B0D87FAE22F899A100C6D921 /* Model */,
 				B0D4C37422F337CF00532B76 /* Profile.storyboard */,
 			);
 			path = Profile;
@@ -240,6 +243,14 @@
 				B01FC76B22F88D9200FE3FB9 /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0D87FAE22F899A100C6D921 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0D87FAF22F8A94000C6D921 /* Profile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F66C787C22D8BC45001B5FDA = {
@@ -458,6 +469,7 @@
 				B0145E1122EF57C8001D86ED /* PostViewController.swift in Sources */,
 				83D999E722EB24C600C32A94 /* PostViewModel.swift in Sources */,
 				B0145E1622EF63F4001D86ED /* PostTabBarViewController.swift in Sources */,
+				B0D87FB022F8A94000C6D921 /* Profile.swift in Sources */,
 				8382738622E9DCCC00CF01CE /* AutenticationService.swift in Sources */,
 				8382738C22E9EF5400CF01CE /* SingUpViewController.swift in Sources */,
 				8382738A22E9EBB700CF01CE /* ScreenManager.swift in Sources */,

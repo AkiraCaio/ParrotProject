@@ -30,6 +30,7 @@ class PostTabBarViewController: UITabBarController {
         controllers.append(controllerProfileViewHome)
         
         self.viewControllers = controllers
+        
     }
     
 }

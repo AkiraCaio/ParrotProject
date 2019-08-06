@@ -1,24 +1,22 @@
 //
-//  UserViewModel.swift
+//  ProfileViewModel.swift
 //  Treinamento-iOS
 //
-//  Created by administrador on 25/07/19.
+//  Created by Caio Pinho on 06/08/19.
 //  Copyright © 2019 Treinamento. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-
-struct UserView{
-    var userName = ""
-    var id = -1
-    var friends: [User] = []
+struct ProfileView{
+    var author = UserView()
+    var postagens: [PostView] = []
 }
 
-class UserViewModel {
+class ProfileViewModel{
     
-    static func save(object: User){
+    static func save(object: Profile){
         
         self.delete()
         
@@ -29,19 +27,15 @@ class UserViewModel {
     
     static func delete() {
         
-        let result = uiRealm.objects(User.self)
-            
+        let result = uiRealm.objects(Profile.self)
+        
         try? uiRealm.write {
             uiRealm.delete(result)
         }
     }
     
-    static func deleteAll(){
-        
-        try? uiRealm.write {
-            uiRealm.deleteAll()
-        }
-        
-    }
+    
+    
+    
     
 }

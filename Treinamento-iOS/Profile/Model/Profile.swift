@@ -12,7 +12,7 @@ import ObjectMapper
 
 class Profile: Object, Mappable {
     
-    @objc dynamic var user: Author?
+    @objc dynamic var author: Author?
     var postList = List<Post>()
     
     required convenience init?(map: Map) {
@@ -20,8 +20,8 @@ class Profile: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        self.user                               <- map["usuario"]
-        self.postList                           <- map["postagens"]
+        self.author                               <- map["usuario"]
+        self.postList                             <- map["postagens"]
     }
     
 }

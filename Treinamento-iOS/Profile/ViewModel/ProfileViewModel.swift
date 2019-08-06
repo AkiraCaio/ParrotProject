@@ -21,7 +21,7 @@ class ProfileViewModel{
         self.delete()
         
         try? uiRealm.write {
-            uiRealm.add(object, update: .all)
+            uiRealm.add(object, update: .error)
         }
     }
     
@@ -32,6 +32,26 @@ class ProfileViewModel{
         try? uiRealm.write {
             uiRealm.delete(result)
         }
+    }
+    
+    static func getProfile(id: Int) -> ProfileView{
+        let results = uiRealm.objects(Profile.self).filter({$0.author?.id.value ?? 0 == id})
+        
+        return self.getAsView(profile: results.first)
+    }
+    
+    
+    static func getAsView(profile: Profile?) -> ProfileView{
+        guard let profile = profile else{
+            return ProfileView()
+        }
+        
+        var profileView = ProfileView()
+        
+        profileView.author = UserViewModel.getAsView(user: profile.author)
+        profileView.postagens = PostViewModel.getAsView(posts: profile.postList)
+
+        return profileView
     }
     
     

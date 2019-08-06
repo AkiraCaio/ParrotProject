@@ -85,6 +85,17 @@ class PostViewModel {
         return postsView
     }
     
+    static func getAsView(posts: List<Post>) -> [PostView] {
+        
+        var postsView: [PostView] = []
+        
+        posts.forEach { (post) in
+            postsView.append(self.getAsView(post: post))
+        }
+        
+        return postsView
+    }
+    
     static func getAsModel(postView: PostView) -> Post {
         let post = Post()
 

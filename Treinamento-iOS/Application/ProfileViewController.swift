@@ -40,12 +40,21 @@ class ProfileViewController: UIViewController {
         
     }
     
+    
+    func setupProfileData(){
+        userNameLabel.text = profile.author.userName
+        
+    }
+    
 }
+
 
 
 extension ProfileViewController: ProfileServiceDelegate {
     func sucess() {
-        self.profile.author = ProfileViewModel.getAuthorView(id: profile.author.id)
+        
+        self.profile = ProfileViewModel.getProfile(id: SessionControl.user?.id.value ?? -1)
+        self.setupProfileData()
     }
     
     func failure(erro: String) {

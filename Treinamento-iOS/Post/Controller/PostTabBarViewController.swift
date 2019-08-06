@@ -27,6 +27,7 @@ class PostTabBarViewController: UITabBarController {
         let controllerProfileViewHome = StoryboardScene.Profile.profileViewController.instantiate()
         controllerProfileViewHome.tabBarItem.image = Asset.iconProfileTabBar.image
         controllerProfileViewHome.tabBarItem.title = L10n.Tabbar.profile
+        controllerProfileViewHome.profile = ProfileViewModel.getProfile(id: controllerPostViewHome)
         controllers.append(controllerProfileViewHome)
         
         self.viewControllers = controllers

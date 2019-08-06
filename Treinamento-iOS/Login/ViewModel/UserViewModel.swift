@@ -44,4 +44,30 @@ class UserViewModel {
         
     }
     
+    static func getAsView(user: User?) -> UserView{
+        guard let user = user else{
+            return UserView()
+        }
+        
+        var userView = UserView()
+        
+        userView.id = user.id.value ?? -1
+        userView.userName = user.userName ?? ""
+        
+        return userView
+    }
+    
+    static func getAsView(user: Author?) -> UserView{
+        guard let user = user else{
+            return UserView()
+        }
+        
+        var userView = UserView()
+        
+        userView.id = user.id.value ?? -1
+        userView.userName = user.userName ?? ""
+        
+        return userView
+    }
+    
 }
